@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="#75c9ff"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".SignInActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:shadowColor="#9A9595"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:padding="5dp"
+        android:shadowRadius="3"
+        android:fontFamily="@font/lobseterregular"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_above="@+id/name_inputs"
+
+        android:textSize="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/sign_in_text"/>
+
+    <RelativeLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_shape"
+        android:layout_marginBottom="10dp"
+        android:elevation="2dp"
+        android:padding="2dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <com.hbb20.CountryCodePicker
+            android:layout_width="wrap_content"
+            app:ccp_showFlag="false"
+            android:id="@+id/country_code_picker"
+            android:padding="3dp"
+            android:elevation="2dp"
+            android:layout_height="wrap_content"
+            app:ccp_defaultNameCode="ET"
+            android:layout_alignTop="@id/phone_number"
+            android:layout_alignBottom="@id/phone_number"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/phone_number"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:elevation="2dp"
+            android:textColor="#000"
+            android:textSize="19sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_toRightOf="@+id/country_code_picker"
+            android:padding="10dp"
+            android:background="@drawable/phone_number_back"
+            android:hint="Phone number"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create account"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/create_account"/>
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_shape"
+        android:backgroundTint="#006bd0"
+        android:onClick="nextClickedIn"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginTop="45dp"
+        android:textStyle="bold" />
+
+
+
+</LinearLayout>
+    <!--#C1FFB3-->

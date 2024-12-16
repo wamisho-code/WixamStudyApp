@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/account_fragment"
+    tools:context=".AccountFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:gravity="center|left"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/person_icon"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#656262"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profile_image"
+            android:padding="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="Username"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="15sp"
+            /></RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/analytics_icon"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Analytics"
+                android:textColor="#515050"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:id="@+id/noDataFound"
+                android:visibility="gone"
+                android:fontFamily="@font/roboto_bold"
+                android:text="No data have been recorded! Take exam and check again."
+                android:textColor="#F48686"/>
+            <Spinner
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_back2"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:layout_margin="10dp"
+                android:paddingRight="25dp"
+                android:layout_gravity="top|right"
+                android:hint="Select grade"
+                android:layout_centerVertical="true"
+                android:id="@+id/spinrer_analytics"
+                android:elevation="2dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="300dp"
+                    android:padding="10dp"
+                    android:id="@+id/pie_chart"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:backgroundTint="#D1D0D0"
+            android:background="@drawable/input_shape"
+            android:layout_height="45dp"
+            android:padding="7dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="14sp"
+            android:layout_margin="20dp"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:drawablePadding="8dp"
+            android:id="@+id/logout_btn"
+            android:drawableRight="@drawable/logout_icon"
+
+            />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RadioButtonSelectedTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#006bd0</item> <!-- Color for selected state -->
+
+    </style>
+    <style name="CustomTextAppearance" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">14sp</item> <!-- Change to desired text size -->
+        <item name="android:fontFamily">@font/roboto_bold</item> <!-- Change to desired font -->
+    </style>
+</resources>

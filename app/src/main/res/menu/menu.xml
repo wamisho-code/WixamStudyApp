@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Tests"
+        android:id="@+id/test"
+        app:showAsAction=""
+        android:icon="@drawable/question_icon"/>
+    <item android:title="Community"
+        android:id="@+id/community"
+        android:icon="@drawable/community_icon"/>
+    <item android:title="Account"
+        android:id="@+id/account"
+        android:icon="@drawable/account_icon"/>
+    <item android:title="Payment"
+        android:id="@+id/payment"
+        android:icon="@drawable/payment_icon"/>
+
+
+</menu>
+<!--<item android:title="Account"
+        android:id="@+id/account"
+        android:icon="@drawable/account_icon"/>-->

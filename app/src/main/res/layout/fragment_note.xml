@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/note_fragment"
+    android:layout_height="match_parent"
+    tools:context=".NoteFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:gravity="center"
+       android:layout_height="match_parent">
+   <TextView
+       android:layout_width="wrap_content"
+       android:drawableTint="#807C7C"
+       android:drawableLeft="@drawable/note_icon"
+       android:drawablePadding="5dp"
+       android:gravity="center"
+       android:layout_height="wrap_content"
+       android:text="Notes Screen"
+       android:fontFamily="@font/roboto_bold"
+       android:textSize="20sp"
+       />
+   </LinearLayout>
+</FrameLayout>

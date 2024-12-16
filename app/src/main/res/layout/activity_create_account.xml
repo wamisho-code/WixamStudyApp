@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="#FFFF"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".CreateAccountActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#535252"
+        android:textStyle="bold"
+        android:layout_above="@+id/name_inputs"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/sign_in_text"/>
+
+    <Button
+        android:id="@+id/google_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/signin_shapes"
+        android:drawableLeft="@drawable/google_icon"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="left|center"
+        android:onClick="signInGoogle"
+        android:padding="5dp"
+        android:text="Sign-in with Google"
+        android:textAllCaps="false"
+        android:elevation="0dp"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/signin_shapes"
+        android:drawableLeft="@drawable/facebook_icon"
+        android:drawablePadding="10dp"
+        android:elevation="0dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="left|center"
+        android:onClick="signInFaceBook"
+        android:padding="5dp"
+        android:text="Sign-in with FaceBook"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/signin_shapes"
+        android:drawablePadding="10dp"
+        android:elevation="0dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="left|center"
+        android:onClick="gotoMain"
+        android:padding="5dp"
+        android:text="Go to main"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+
+
+
+</LinearLayout>
+    <!--#C1FFB3-->

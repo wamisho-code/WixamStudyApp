@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:layout_marginLeft="7dp"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:id="@+id/analytics_subject"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Analytics"
+            android:textColor="#717171"/>
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="3dp"
+            android:id="@+id/h_bar"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average Time Taken:"
+            android:textSize="14sp"
+            android:id="@+id/average_time_taken"
+            android:textColor="#717171"
+            android:padding="8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginBottom="8dp"/>
+
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChemistrySelecorActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:tint="#006bd0"
+            android:id="@+id/back_btn"
+            android:src="@drawable/back_icon"
+            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chemistry Exam"
+            android:textSize="21sp"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:id="@+id/label_title"
+            android:textColor="#006bd0"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_toRightOf="@+id/back_btn"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/info_icon"
+        android:drawablePadding="5dp"
+        android:drawableTint="#888888"
+        android:text="Select any of the units provided under each grade. You can mix units from the 4 grades in any combination you desire. The exam will contain questions from the units you checked or selected."
+        android:inputType="textMultiLine"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="#888888"
+        android:padding="5dp"
+        android:elevation="3dp"
+
+        android:id="@+id/manual"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"
+            android:id="@+id/grade_units_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select All - Entrance Mode"
+                android:layout_gravity="top|end"
+                android:id="@+id/select_txt"
+                android:backgroundTint="#F2F3F2"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/input_shape"
+                android:elevation="3dp"
+                android:padding="8dp"
+                android:gravity="center|left"
+                android:textColor="@color/black"
+
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/grade_holder"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_shape"
+                    android:backgroundTint="#F2F3F2"
+                    android:id="@+id/grade9_list"
+
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grade 9"
+                        android:background="@drawable/input_shape"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:onClick="expand"
+                        android:backgroundTint="#F2F3F2"
+                        android:textColor="#000"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:padding="7dp"
+                        android:id="@+id/grade_title"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_regular"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:id="@+id/grade_9_holder">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-1 CHEMISTRY AND ITS IMPORTANCE"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade9_unit1"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-2 MEASUREMENTS AND SCIENTIFIC METHODS"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade9_unit2"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-3 STRUCTURE OF THE ATOM"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade9_unit3"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-4 PERIODIC CLASSIFICATION OF ELEMENTS"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade9_unit4"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-5 CHEMICAL BONDING"
+                            android:textSize="12sp"
+                            android:textAllCaps="true"
+                            android:padding="8dp"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade9_unit5"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/grade10_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/grade9_list"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_shape"
+                    android:backgroundTint="#F2F3F2"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grade 10"
+                        android:background="@drawable/input_shape"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:onClick="expand"
+                        android:backgroundTint="#F2F3F2"
+                        android:textColor="#000"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:padding="7dp"
+                        android:id="@+id/grade10_title"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_regular"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:id="@+id/grade_10_holder">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-1 CHEMICAL REACTIONS AND STOICHIOMETRY"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade10_unit1"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-2 SOLUTIONS"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade10_unit2"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-3 IMPORTANT INORGANIC COMPOUNDS"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade10_unit3"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-4 ENERGY CHANGES AND ELECTRO-CHEMISTRY"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade10_unit4"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-5 METALS AND NON METALS"
+                            android:textSize="12sp"
+                            android:textAllCaps="true"
+                            android:padding="8dp"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade10_unit5"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-6 HYDROCARBONS AND THEIR NATURAL SOURCES"
+                            android:textSize="12sp"
+                            android:textAllCaps="true"
+                            android:padding="8dp"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade10_unit6"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/input_shape"
+                    android:backgroundTint="#F2F3F2"
+
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/grade10_list"
+                    android:id="@+id/grade11_list"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grade 11"
+                        android:background="@drawable/input_shape"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:onClick="expand"
+                        android:backgroundTint="#F2F3F2"
+                        android:textColor="#000"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:padding="7dp"
+                        android:id="@+id/grade11_title"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_regular"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:id="@+id/grade_11_holder">
+                        <CheckBox
+                            android:id="@+id/chemistry_grade11_unit1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:padding="8dp"
+                            android:text="Unit-1 Atomic Structure And Periodic Properties Of The Elements"
+                            android:textAllCaps="true"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/chemistry_grade11_unit2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:padding="8dp"
+                            android:text="Unit-2 Chemical Bonding"
+                            android:textAllCaps="true"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/chemistry_grade11_unit3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:padding="8dp"
+                            android:text="Unit-3 Physical State Of Matter"
+                            android:textAllCaps="true"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/chemistry_grade11_unit4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:padding="8dp"
+                            android:text="Unit-4 Chemical Kinetics"
+                            android:textAllCaps="true"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/chemistry_grade11_unit5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:padding="8dp"
+                            android:text="Unit-5 Chemical Equilibrium"
+                            android:textAllCaps="true"
+                            android:textSize="12sp"/>
+
+                        <CheckBox
+                            android:id="@+id/chemistry_grade11_unit6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:padding="8dp"
+                            android:text="Unit-6 Some Important Oxygen-containing Organic Compounds"
+                            android:textAllCaps="true"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_shape"
+                    android:backgroundTint="#F2F3F2"
+
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/grade11_list"
+                    android:id="@+id/grade12_list"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grade 12"
+                        android:background="@drawable/input_shape"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:onClick="expand"
+                        android:backgroundTint="#F2F3F2"
+                        android:textColor="#000"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:padding="7dp"
+                        android:id="@+id/grade12_title"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_regular"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:id="@+id/grade_12_holder">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-1 ACID-BASE EQUILIBRIA"
+                            android:textSize="12sp"
+                            android:textAllCaps="true"
+                            android:padding="8dp"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade12_unit1"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-2 ELECTROCHEMISTRY"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade12_unit2"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-3 INDUSTRIAL CHEMISTRY"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade12_unit3"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-4 POLYMERS"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:buttonTint="@color/black"
+                            android:textAllCaps="true"
+                            android:id="@+id/chemistry_grade12_unit4"/>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit-5 INTRODUCTION TO ENVIRONMENTAL CHEMISTRY"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:buttonTint="@color/black"
+                            android:id="@+id/chemistry_grade12_unit5"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number of question"
+                    android:id="@+id/label_noquestion"
+
+                    android:textColor="@color/black"
+                    android:layout_alignTop="@+id/decrease_questionno"
+                    android:layout_alignBottom="@+id/decrease_questionno"
+                    android:layout_marginTop="15dp"
+                    android:textSize="16sp"/>
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="-"
+                    android:layout_marginTop="15dp"
+                    android:textSize="19sp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="selectNumberOfQuestion"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:id="@+id/decrease_questionno"
+
+                    android:layout_toRightOf="@+id/label_noquestion"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:backgroundTint="#73B8FA"
+                    android:background="@drawable/input_shape"
+                    android:layout_alignTop="@+id/decrease_questionno"
+                    android:layout_alignBottom="@+id/decrease_questionno"
+                    android:textColor="#FFFF"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:longClickable="false"
+                    android:textIsSelectable="false"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:id="@+id/no_of_question"
+
+                    android:layout_toRightOf="@+id/decrease_questionno"/>
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="+"
+                    android:layout_marginTop="15dp"
+                    android:textSize="19sp"
+
+                    android:layout_marginLeft="10dp"
+                    android:onClick="selectNumberOfQuestion"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:id="@+id/increase_questionno"
+                    android:layout_toRightOf="@+id/no_of_question"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set allowed time"
+                    android:id="@+id/label_timer"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/time_icon"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@+id/label_timer"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_back2"
+                    android:padding="12dp"
+                    android:hint="Select grade"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Timerspinner"
+                    android:elevation="2dp"
+                    android:layout_marginTop="10dp"
+
+                    />
+
+            </RelativeLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Start Exam"
+                android:textSize="17sp"
+                android:background="@drawable/input_shape"
+                android:backgroundTint="#006bd0"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:id="@+id/start_exam_btn"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
